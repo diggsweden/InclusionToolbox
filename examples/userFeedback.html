@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="UserRating" />
+	<link rel='icon' href="/examples/favicon.ico" type="image/x-icon" />
+	<title>UserFeedback Example</title>
+
+	<style>
+		@media (prefers-color-scheme: dark) {
+			body {
+				background-color: #161616;
+				color: #fff;
+			}
+		}
+	</style>
+
+	<!-- Include the digital inclusion toolbox script -->
+	<script src="../dist/InclusionToolbox.js" type="application/javascript"></script>
+</head>
+
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<div id="feedback"></div>
+
+	<script type="application/javascript">
+		(function () {
+			if (typeof InclusionToolbox !== 'undefined') {
+				// Retrieve UserFeedback class from toolbox.
+				const { UserFeedback } = InclusionToolbox;
+
+				// Configuration for UserFeedback
+				const config = {
+					apiKey: "4f9ef8bb-3f8c-41f2-b294-b6d2f72b9597", // "123456-abcdef-7890", // API-key string
+					defaultTags: ['example1', 'example2'], 			// (optional) Array of default tags for filters
+					defaultLabels: ['example1', 'example2'], 		// (optional) Array of default labels for filters
+				};
+
+				// Options for UserFeedback (optional)
+				const options = {
+					styling: {
+						align: "center", 		// Align frame: left|center|right (Default: center)
+						theme: "light", 			// Select theme: dark|light|auto (Default: auto)
+					},
+				};
+
+				// Instantiate UserFeedback with the configuration
+				const Feedback = new UserFeedback(config, options);
+
+				// Embed the UserRating widget into the target element
+				Feedback.load(
+					"ExampleFeedbackName1", // Name of the collection
+					"#feedback", 			// Target element, HTML Element|String
+					['ExampleTag'],			// (optional) Array of tags for the specific feedback collection
+					['ExampleLabel'],		// (optional) Array of labels for the specific feedback collection
+				);
+			}
+		})();
+	</script>
+</body>
+
+</html>

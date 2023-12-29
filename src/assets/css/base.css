@@ -1,0 +1,38 @@
+@font-face {
+	font-family: 'Lato';
+	src: local('Lato');
+}
+
+:root {
+	--inclusion-toolbox-font: 'Lato', sans-serif;
+
+	--inclusion-toolbox-primary-color: #124562;
+	--inclusion-toolbox-secondary-color: #E6ECF2;
+	--inclusion-toolbox-tertiary-color: #B6C7D7;
+
+	--inclusion-toolbox-background-color: var(--inclusion-toolbox-secondary-color, #E6ECF2);
+	--inclusion-toolbox-secondary-background-color: #FFF;
+
+	--inclusion-toolbox-border-color: var(--inclusion-toolbox-tertiary-color, #B6C7D7);
+
+	--inclusion-toolbox-text-color: var(--inclusion-toolbox-primary-color, #124562);
+	--inclusion-toolbox-text-active-color: #A8B4BC;
+}
+
+/**
+* Inclusion Toolbox dark Variables
+*/
+@media only screen and (prefers-color-scheme: dark) {
+	:root {
+		--inclusion-toolbox-primary-color: #D4DADF;
+		--inclusion-toolbox-secondary-color: #15191F;
+		--inclusion-toolbox-tertiary-color: #4A5464;
+
+		--inclusion-toolbox-background-color: var(--inclusion-toolbox-secondary-color, #15191F);
+		--inclusion-toolbox-secondary-background-color: #4A5464;
+
+		--inclusion-toolbox-border-color: var(--inclusion-toolbox-tertiary-color, #4A5464);
+
+		--inclusion-toolbox-text-color: #EFEFEF;
+	}
+}

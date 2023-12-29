@@ -1,0 +1,57 @@
+name: CI/CD Pipeline
+
+# Trigger the workflow on push or pull request
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  AWS_REGION: eu-north-1
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      # Clone the repo
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      # Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Cache node modules
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            ${{ runner.os }}-node-
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run tests
+      - name: Run tests
+        run: npm test
+        id: tests
+
+      # Build the static site
+      - name: Create static build
+        run: npm run build
+
+      # Upload the artifact for other stages to use
+      - name: Share artifact in GitHub workflow
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: dist

@@ -1,0 +1,10 @@
+/**
+ * iframe element styles for inclusion toolbox
+ */
+.inclusion-toolbox-iframe {
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}

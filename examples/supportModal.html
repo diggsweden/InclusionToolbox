@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="UserRating" />
+	<link rel='icon' href="/examples/favicon.ico" type="image/x-icon" />
+	<title>SupportModal Example</title>
+
+	<!-- Include the digital inclusion toolbox script -->
+	<script src="../dist/InclusionToolbox.js" type="application/javascript"></script>
+
+	<style>
+		@media (prefers-color-scheme: dark) {
+			body {
+				background-color: #161616;
+				color: #fff;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<script type="application/javascript">
+		(function () {
+			if (typeof InclusionToolbox !== 'undefined') {
+				// Retrieve SupportModal class from toolbox.
+				const { SupportModal } = InclusionToolbox;
+
+				// Configuration for SupportModal
+				const config = {
+					links: {									// All links support the following:
+						chat: 'https://example.com/chat', 		// - full url
+						support: '#support',					// - relative url
+						faq: {									// - object
+							url: '/faq',						//   - relative url
+							target: '_blank',					//   - target attribute
+						},
+						contact: () => {
+							console.log('Open contact form');	// - callback function
+						},
+					},
+				};
+
+				// Options for SupportModal (optional)
+				const options = {
+					styling: {
+						iconOnly: true, 			// Show icon only: true|false (Default: false)
+						align: 'bottomLeft', 		// Align frame: topLeft|topRight|bottomLeft|bottomRight (Default: bottomLeft)
+						colors: {
+							primary: '#124562', 	// Primary color: Icon, text (Default: #124562)
+							secondary: '#E6ECF2', 	// Secondary color: Background (Default: #E6ECF2)
+							tertiary: '#688AAC', 	// Tertiary color: Border (Default: #B6C7D7)
+						},
+					},
+					useLocalStorage: true, 			// Allow localStorage in plugin: true|false (Default: true)
+				};
+
+				// Instantiate SupportModal with the configuration
+				const Modal = new SupportModal(config, options);
+
+				// Load SupportModal
+				Modal.load();
+			}
+		})();
+	</script>
+</body>
+
+</html>

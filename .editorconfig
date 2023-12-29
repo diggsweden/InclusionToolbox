@@ -1,0 +1,25 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Matches multiple files with brace expansion notation
+[*.{js,jsx,ts,tsx,html,css,sass,scss,json,md}]
+
+# Indentation style
+indent_style = tab
+
+# Indentation size
+indent_size = 4
+
+# End of line character
+end_of_line = lf
+
+# Charset
+charset = utf-8
+
+# Trim trailing whitespace
+trim_trailing_whitespace = true
+
+# Insert final new line
+insert_final_newline = true

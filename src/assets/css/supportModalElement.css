@@ -1,0 +1,187 @@
+/**
+* Reset Button
+*/
+button {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+    overflow: visible;
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/**
+ * Support Modal Element styles
+ */
+.support-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.support-modal-content {
+	width: 93%;
+}
+
+.support-modal-button {
+    position: absolute;
+    z-index: 1001;
+    width: auto;
+    height: 48px;
+    cursor: pointer;
+    pointer-events: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 35px;
+    border: 1px solid var(--inclusion-toolbox-border-color, #B6C7D7);
+    background: var(--inclusion-toolbox-secondary-color, #E6ECF2);
+    box-shadow: 0px 5px 12px 0px rgba(21, 25, 31, 0.2);
+}
+
+.support-modal-button svg {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+}
+
+.support-modal-button:hover {
+    border: 1px solid var(--inclusion-toolbox-border-color, #B6C7D7);
+    background: var(--inclusion-toolbox-secondary-background-color, #FFF);
+}
+
+.support-modal-button:active {
+	border: 1px solid var(--inclusion-toolbox-border-color, #B6C7D7);
+	background: var(--inclusion-toolbox-secondary-background-color, #FFF);
+
+	span {
+		text-decoration: underline;
+		text-underline-offset: 6px;
+		color: var(----inclusion-toolbox-text-active-color, #A8B4BC);
+	}
+}
+
+.support-modal-button:focus-visible {
+    outline: none;
+    border: 2px solid var(--inclusion-toolbox-border-focus-color, #124562);
+    background: var(--inclusion-toolbox-secondary-color, #E6ECF2);
+}
+
+.support-modal-element {
+    position: absolute;
+    z-index: 1001;
+	background: transparent;
+    border: none;
+    outline: none;
+    pointer-events: auto;
+}
+
+.support-modal-button-text {
+    color: var(--inclusion-toolbox-primary-color, #124562);
+    font-family: var(--inclusion-toolbox-font, 'Lato'), sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 144.444% */
+    padding: 0px 10px 0px 2px;
+}
+
+/* Positioning classes for support modal button and element */
+.support-modal-button.bottomLeft,
+.support-modal-element.bottomLeft {
+    bottom: 20px;
+    left: 15px;
+}
+
+.support-modal-button.bottomRight,
+.support-modal-element.bottomRight {
+    bottom: 20px;
+    right: 15px;
+}
+
+.support-modal-button.topLeft,
+.support-modal-element.topLeft {
+    top: 20px;
+    left: 15px;
+}
+
+.support-modal-button.topRight,
+.support-modal-element.topRight {
+    top: 20px;
+    right: 15px;
+}
+
+/* Media queries for responsive adjustments */
+@media only screen and (min-width: 48em) {
+    .support-modal-button.bottomLeft,
+    .support-modal-element.bottomLeft {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .support-modal-button.bottomRight,
+    .support-modal-element.bottomRight {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .support-modal-button.topLeft,
+    .support-modal-element.topLeft {
+        top: 20px;
+        left: 20px;
+    }
+
+    .support-modal-button.topRight,
+    .support-modal-element.topRight {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    .support-modal-button.bottomLeft,
+    .support-modal-element.bottomLeft {
+        bottom: 30px;
+        left: 30px;
+    }
+
+    .support-modal-button.bottomRight,
+    .support-modal-element.bottomRight {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .support-modal-button.topLeft,
+    .support-modal-element.topLeft {
+        top: 30px;
+        left: 30px;
+    }
+
+    .support-modal-button.topRight,
+    .support-modal-element.topRight {
+        top: 30px;
+        right: 30px;
+    }
+}
+
+@media screen and (prfecters-color-scheme: dark) {
+	.support-modal-button svg g path {
+		fill: #EFEFEF;
+	}
+}
