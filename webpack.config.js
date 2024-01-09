@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+//
+// SPDX-License-Identifier: MIT
+
 import path from "path";
 import { fileURLToPath } from "url";
 import Dotenv from "dotenv-webpack";

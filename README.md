@@ -8,7 +8,9 @@ SPDX-License-Identifier: MIT
 
 # InclusionToolbox lib
 
-[![License: MIT](https://img.shields.io/badge/Licence-MIT-yellow)](https://img.shields.io/badge/Licence-MIT-yellow) [![Standard commitment](https://img.shields.io/badge/Standard_for_public_code-commitment-green)](https://img.shields.io/badge/Standard_for_public_code-commitment-green)
+[![License: MIT](https://img.shields.io/badge/Licence-MIT-yellow)](https://img.shields.io/badge/Licence-MIT-yellow)
+
+[![REUSE status](https://api.reuse.software/badge/github.com/diggsweden/inclusiontoolbox)](https://api.reuse.software/info/github.com/diggsweden/inclusiontoolbox)
 
 [![Node: 18.17.0](https://img.shields.io/badge/Node-18.17.0-red)](https://img.shields.io/badge/Node-18.17.0-red)
 

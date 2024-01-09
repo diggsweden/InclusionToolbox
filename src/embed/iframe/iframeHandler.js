@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+//
+// SPDX-License-Identifier: MIT
+
 import PostMessageHandler from "./postMessageHandler.js";
 import IframeElement from "../../assets/components/iframeElement.js";
 

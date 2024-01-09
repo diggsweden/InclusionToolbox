@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+//
+// SPDX-License-Identifier: MIT
+
 import '@util/i18n.js';
 import UserFeedback from '@service/userFeedback/userFeedback.js';
 import SupportModal from '@service/supportModal/supportModal.js';
