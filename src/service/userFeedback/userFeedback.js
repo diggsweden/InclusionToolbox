@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+//
+// SPDX-License-Identifier: MIT
+
 import IframeHandler from "@embed/iframe/iframeHandler.js";
 import getFingerprint from "@util/fingerprint.js";
 import messageHandlers from "./messageHandlers.js";

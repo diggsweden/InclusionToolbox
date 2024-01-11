@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+//
+// SPDX-License-Identifier: MIT
+
 import React, { useEffect, useRef } from "react";
 import { UserFeedback } from "path/to/InclusionToolbox";
 

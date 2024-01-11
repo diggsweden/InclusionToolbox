@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+//
+// SPDX-License-Identifier: MIT
+
 import SupportModal from "@src/service/supportModal/supportModal.js";
 import IframeHandler from "@embed/iframe/iframeHandler.js";
 import ConfigManager from "@util/configManager.js";

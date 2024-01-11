@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+//
+// SPDX-License-Identifier: MIT
+
 import "../css/base.css";
 import "../css/supportModalElement.css";
 import "../fonts/Lato-Regular.ttf";

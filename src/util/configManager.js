@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2023 Digg - Agency for Digital Government
+//
+// SPDX-License-Identifier: MIT
+
 const DEFAULT_CONFIG_PREFIX = process.env.CONFIG_PREFIX || "INCLUSION_TOOLBOX_";
 /*
  * This is a singleton class that manages long lived configuration for the application.
